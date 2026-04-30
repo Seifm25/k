@@ -1,0 +1,302 @@
+:root {
+    --body: rgb(37, 0, 0);
+    --barhom-back: white;
+    --nav-links-backhover: rgba(0, 0, 0, 0.753);
+    --homborder: rgba(255, 255, 255, 0.1);
+    --navshadow: rgba(0, 0, 0, 0.5);
+    --text: white;
+    --texthovernav-border-btn: #c13b3b;
+    --dropdown-contentbac: rgba(0, 0, 0, 0.2);
+    --login-btnhoverbac: rgba(128, 0, 0, 0.603);
+    --log: white;
+    --bg-videobac: rgba(0, 0, 0, 0.6);
+    --video-containerbac: rgba(0, 0, 0, 0.5);
+    --image-boxshad: rgba(0, 0, 0, 0.7);
+    --image-boxshad: rgba(255, 255, 255, 0.1);
+    --center-text-overlayshad: rgba(0, 0, 0, 0.9);
+    --footerbac: rgba(15, 0, 0, 0.95);
+    --brand-itemhovshad: rgba(193, 59, 59, 0.4);
+
+
+    --bodybac: #c9d6ff;
+    --bodbac1: #646062;
+    --bodbac2: #c16e68;
+    --containerbac: #393434;
+    --contshadow: rgba(0, 0, 0, 0.35);
+    --cont-a: #333;
+    --contbtnbac: #ffeeee;
+    --conthi-in-social-h1-span-tog: #fff;
+    --contform: #393434;
+    --socailtex: #ff9;
+    --tog-bac: #c13d51;
+    --sochov: #ff0000;
+    --form: #F44336;
+
+    --contactbac: rgba(0, 0, 0, 0.85);
+    --text: white;
+    --form: rgba(255, 255, 255, 0.06);
+    --formshad: rgba(255, 255, 255, 0.05);
+    --inpBtn-hov: white;
+    --forshad: rgba(255, 255, 255, 0.08);
+
+    --body-bg-gradient: linear-gradient(to right, #646062, #c16e68);
+    --container-bg: #393434;
+    --home-bg: #000000;
+    --nav-bg: rgba(128, 0, 0, 0.15);
+    --input-bg: #ffeeee;
+    --button-bg: #ffeeee;
+    --accent-red: #c13d51;
+    --accent-gradient: linear-gradient(to right, #8d2a39, #ff0000);
+    --text-white: #ffffff;
+    --text-black: #000000;
+    --text-ghost: ghostwhite;
+    --text-muted: #333333;
+    --section-bg: transparent;
+    --card-bg: rgba(255, 255, 255, 0.05);
+
+}
+
+#theme-switch {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    position: absolute;
+    top: 20px;
+    left: 70px;
+    z-index: 1000;
+}
+
+#theme-switch img {
+    position: fixed;
+    width: 30px;
+    height: auto;
+    transition: 0.3s;
+
+}
+
+.light-icon {
+    display: block;
+    visibility: visible;
+    position: fixed;
+    opacity: 1;
+}
+
+.dark-icon {
+    display: none;
+    visibility: visible;
+    position: fixed;
+    opacity: 1;
+
+}
+
+body.lightMode .light-icon {
+    display: none;
+}
+
+body.lightMode .dark-icon {
+    display: block;
+    filter: invert(1);
+}
+
+body.lightMode {
+    /*home body&nav style in light mode*/
+    --text: black;
+    --navshadow: rgba(0, 0, 0, 0.2);
+    --nav-links-backhover: #4d3b3bd4;
+    --drobdown-contenbac: rgba(255, 255, 255, 0.2);
+    --log: var(--text-black);
+    --image-boxshad: rgba(0, 0, 0, 0.9);
+    --barhom-back: rgba(0, 0, 0, 0.8);
+}
+
+body.lightMode footer {
+    background-color: #4d3b3bd4;
+}
+
+body.lightMode footer h3 {
+    color: #5f0000;
+}
+
+/* filter on video  */
+
+/* red with white filter  */
+/* body.lightMode #bg-video {
+    filter: blur(15px) brightness(1.2) sepia(0.2);
+}
+body.lightMode .video-container::after {
+    background: rgba(255, 255, 255, 0.4);
+} */
+
+/* white and grey video  */
+body.lightMode #bg-video {
+    filter: blur(15px) brightness(1.7) grayscale(1);
+    transition: filter 0.5s ease;
+}
+
+body.lightMode .video-container::after {
+    /* زودنا الشفافية شوية عشان تبيض الخلفية أكتر */
+    background: rgba(255, 255, 255, 0.75);
+    z-index: -1;
+    transition: background 0.5s ease;
+}
+
+/* Navbar & Global - light */
+body.lightMode .nav-links a:hover {
+    background-color: rgba(153, 34, 25, 0.1) !important; 
+    color: white ; 
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);    
+}
+
+/* Contact - lightmode */
+body.lightMode:has(.contact-container) {
+    background: linear-gradient(rgb(237 234 234 / 79%), rgb(239 8 8 / 79%)), url(../imges/mercedes1.jpeg);
+    filter: blur(8px);
+    background-size: cover;
+    background-position: center;
+    direction: ltr;
+    filter: none;
+    color: black;
+}
+
+body.lightMode .contact-info h1,
+body.lightMode .contact-info p {
+    color: black;
+    text-shadow: none;
+}
+
+body.lightMode .contact-form-container {
+    background: rgba(43, 26, 26, 0.897);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); */
+}
+
+body.lightMode .input-group label {
+    color: #000000;
+}
+
+body.lightMode .input-wrapper input,
+body.lightMode textarea {
+    background: rgba(255, 255, 255, 0.76);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #000000;
+}
+
+.input-wrapper input:focus,
+textarea:focus {
+    border-color: #ff0000;
+}
+
+/* LogIn page lightMode */
+body.lightMode:has(#container) {
+    background: linear-gradient(to left, #992219, white) !important;
+}
+
+body.lightMode .container {
+    background-color: white !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+body.lightMode .container form {
+    background-color: white !important;
+}
+
+body.lightMode .container h1,
+body.lightMode .container span,
+body.lightMode .container b,
+body.lightMode .container p {
+    color: #000000 !important;
+}
+
+body.lightMode .container a {
+    color: black !important;
+}
+
+body.lightMode .container a:hover {
+    color: #992219 !important;
+}
+
+/*lma ndos 3la el ay input w nekteb*/
+body.lightMode .container input {
+    background-color: #f4f4f4 !important;
+    color: #000000 !important;
+    border: 1px solid #ddd !important;
+}
+
+body.lightMode .container input:focus {
+    border-color: #992219 !important;
+    background-color: #ffffff !important;
+}
+
+
+body.lightMode .social-icons a {
+    border-color: #992219 !important;
+}
+
+body.lightMode .social-icons a:hover {
+
+    color: white !important;
+    background:#992219 !important;
+    background-color: #992219 !important;
+
+}
+
+
+/*goz2 el red elly beytharak kol shewaya */
+body.lightMode .toggle {
+    background: linear-gradient(to right, #c13b3b, #8d2a39) !important;
+}
+
+/* background: #992219; */
+/*el text elly maktob gowah */
+body.lightMode .toggle-panel {
+    color: white !important;
+}
+
+body.lightMode .toggle-panel h1,
+body.lightMode .toggle-panel p {
+    color: white !important;
+}
+
+body.lightMode .container button.hidden {
+    border-color: white !important;
+    color: white !important;
+}
+
+/* about page lightmode*/
+body.lightMode:has(.about-container) {
+    background: linear-gradient(to left, #992219, white) !important;
+    color: #000000 !important;
+}
+
+/*el words el red zay ma heya*/
+body.lightMode .accent-red,
+body.lightMode .section-icon i,
+body.lightMode .custom-list li i,
+body.lightMode .trust-badge {
+    color: #c13b3b !important;
+}
+/*white words to black words */
+body.lightMode p, 
+body.lightMode .tagline, 
+body.lightMode .section-text h2, 
+body.lightMode .custom-list li {
+    color: #000000 !important;
+}
+body.lightMode .social-icons a {
+    background: white !important;
+    border: 1px solid #c13b3b !important;
+}
+/*ABOUT US tkon a8m3 */
+body.lightMode:has(.about-container) .about-header-section h1 {
+    /* background: #9b261e4f !important; */
+
+}
+/* gomlet scince 2014*/
+body.lightMode:has(.about-container) .about-badge{
+    background: #9b261e4f !important;
+    color: #000000 !important;
+    border:1px solid rgba(218, 85, 85, 0.412);
+
+}

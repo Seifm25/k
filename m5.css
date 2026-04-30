@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.back-video {
+    display: block;
+}
+
+body {
+    background: linear-gradient(to bottom, #c18686, #050505);
+    color: #fff;
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.back-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ✅ التعديل هنا: الكلام يروح عالشمال */
+.content {
+    text-align: left;
+    color: #fff;
+    width: 100%;
+    padding-left: 10%;
+}
+
+.content h1 {
+    font-size: 100px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.content p {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.specials {
+    padding: 80px 10%;
+}
+
+.specials h2 {
+    margin-bottom: 40px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #f39c12;
+    text-align: left;  /* ✅ العنوان على الشمال */
+}
+
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* ✅ التعديلات المهمة اللي تخلي كل البطاقات بنفس الطول */
+.car-card {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 100%;  /* ✅ ده يخلي كل البطاقات بنفس الطول */
+}
+
+.car-card img {
+    width: 100%;
+    height: auto;  /* ✅ ارتفاع ثابت للصورة */
+    object-fit: contain;  /* ✅ الصورة تغطي المساحة بدون تشويه */
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.car-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;  /* ✅ يزق السعر للتحت */
+    font-size: 0.9rem;
+}
+
+.price {
+    color: #f39c12;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    color: #fff;
+    text-align: left;
+}
+
+.car-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.car-card-link:hover .car-card {
+    transform: translateY(-15px);
+    border-color: #555;
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+
+/* تنسيق كامل لقسم futeures */
+.futeures {
+    max-width: 1200px;
+    margin: 80px auto 40px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.futeures h2 {
+    color: #f39c12;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+}
+
+.futeures h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #c13b3b;
+    border-radius: 2px;
+}
+
+.futeures p {
+    color: #e0e0e0;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    max-width: 850px;
+    margin: 30px auto 0;
+    text-align: center;
+}
+
+/* استجابة للموبايل */
+@media (max-width: 768px) {
+    .futeures h2 {
+        font-size: 1.6rem;
+    }
+    
+    .futeures p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+}
