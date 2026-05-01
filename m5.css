@@ -10,7 +10,7 @@
 }
 
 body {
-    background: linear-gradient(to bottom, #c18686, #050505);
+    background: linear-gradient(to right, #343434, #992219);
     color: #fff;
 }
 
@@ -34,7 +34,7 @@ body {
     object-fit: cover;
 }
 
-/* ✅ التعديل هنا: الكلام يروح عالشمال */
+/*  التعديل هنا: الكلام يروح عالشمال */
 .content {
     text-align: left;
     color: #fff;
@@ -65,7 +65,7 @@ body {
     font-weight: bold;
     letter-spacing: 2px;
     color: #f39c12;
-    text-align: left;  /* ✅ العنوان على الشمال */
+    text-align: left;  /*  العنوان على الشمال */
 }
 
 .car-grid {
@@ -74,7 +74,7 @@ body {
     gap: 20px;
 }
 
-/* ✅ التعديلات المهمة اللي تخلي كل البطاقات بنفس الطول */
+/*  التعديلات المهمة اللي تخلي كل البطاقات بنفس الطول */
 .car-card {
     background: rgba(0, 0, 0, 0.5);
     border-radius: 15px;
@@ -83,29 +83,68 @@ body {
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    height: 100%;  /* ✅ ده يخلي كل البطاقات بنفس الطول */
+    height: 100%;  /*  ده يخلي كل البطاقات بنفس الطول */
 }
 
 .car-card img {
     width: 100%;
-    height: auto;  /* ✅ ارتفاع ثابت للصورة */
-    object-fit: contain;  /* ✅ الصورة تغطي المساحة بدون تشويه */
+    height: auto;  /*  ارتفاع ثابت للصورة */
+    object-fit: contain;  /*  الصورة تغطي المساحة بدون تشويه */
     border-radius: 10px;
     margin-bottom: 15px;
 }
 
 .car-info {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: auto;  /* ✅ يزق السعر للتحت */
-    font-size: 0.9rem;
+    flex-direction: column; /* ترتيب العناصر رأسي */
+    gap: 10px;
+    margin-top: auto; 
+    text-align: left;
 }
+
+
+
+
 
 .price {
     color: #f39c12;
     font-weight: bold;
+    font-size: 1.1rem;
+    align-self: flex-start; /* يخلي السعر يبدأ من الشمال */
 }
+
+.car-specs {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 0;
+    margin: 5px 0;
+    font-size: 0.8rem;
+    color: #ccc;
+}
+
+.spec-item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+/* الخطوط الفاصلة */
+.spec-item:not(:last-child) {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+
+
+
+
+
+
+
 
 h3 {
     font-size: 1.2rem;
@@ -127,7 +166,6 @@ h3 {
 }
 
 
-/* تنسيق كامل لقسم futeures */
 .futeures {
     max-width: 1200px;
     margin: 80px auto 40px;
@@ -139,7 +177,7 @@ h3 {
     color: #f39c12;
     font-size: 2.2rem;
     margin-bottom: 20px;
-    font-weight: 700;
+    font-weight: bold;
     letter-spacing: 1px;
     position: relative;
     display: inline-block;
@@ -148,13 +186,13 @@ h3 {
 .futeures h2::after {
     content: '';
     position: absolute;
-    bottom: -10px;
+    bottom: -20px;
     left: 50%;
     transform: translateX(-50%);
-    width: 80px;
+    width: 150px;
     height: 3px;
-    background-color: #c13b3b;
-    border-radius: 2px;
+    background-color: #c13b3b;   
+    border-radius: 3px;
 }
 
 .futeures p {

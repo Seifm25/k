@@ -12,6 +12,28 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Playfair+Display:ital,wght@1,400..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header>
+        <div class="menu" id="menu-icon" onclick="toggleMenu(event)">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+        <nav id="nav-links" class="nav-links">
+            <a href="../index.html">Home</a>
+            <div class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn" onclick="toggleCars(event)">Cars ▾</a>
+                <div id="cars-dropdown" class="dropdown-content">
+                    <a href="bmw.html">BMW</a>
+                    <a href="mercedes.html">Mercedes</a>
+                    <a href="audi.html">Audi</a>
+                    <a href="porsche.html">Porsche</a>
+                </div>
+            </div>
+            <a href="../html files/about.html">About</a>
+            <a href="../html files/contact.html">Contact us</a>
+        </nav>
+    </header>
     <main class="hero">
     
     <video autoplay loop muted playsinline class="back-video">
@@ -26,59 +48,74 @@
         
     </div>
 </main>
-<section class="futeures">
-    <h2>Discover the Finest Luxury Cars for Sale in Egypt</h2>
-    <p>Our inventory is a carefully curated collection of the most exclusive and desirable cars in the world. At Nova Luxury Cars, we bring you a premium selection that caters to every automotive passion—from adrenaline-pumping hypercars to elegant executive sedans. Each vehicle in our showroom is meticulously inspected, ensuring that our clients drive away with nothing less than perfection.</p>
-
-</section>
 <section class="specials">
-        <h2>TODAYS SPECIALS</h2>
-        <div class="car-grid">
-            <!-- Car Card 1 -->
-             <a href="#" class="car-card-link">
+    <h2>TODAYS SPECIALS</h2>
+    <div class="car-grid">
+        <!-- Car Card 1 -->
+        <a href="#" class="car-card-link">
             <div class="car-card">
-                <img src="img/341i.jpg" alt="BMW 341i">
+                <img src="img/341i.jpg" alt="BMW 340i">
                 <div class="car-info">
-                    <h3>BMW 341i</h3>
-                    
-                    <span class="price">$500.00</span>
-                   
+                    <h3>BMW 340i</h3>
+                    <div class="car-specs">
+                        <div class="spec-item"><i class="fas fa-car"></i> 250 km/h</div>
+                        <div class="spec-item"><i class="fas fa-bolt"></i> 382 HP</div>
+                        <div class="spec-item"><i class="fas fa-gas-pump"></i> Petrol</div>
+                    </div>
+                    <span class="price"><del style="font-size: 0.8rem; opacity: 0.6;">$65.000</del><br>$60.000</span>
                 </div>
             </div>
-            </a>
-            <!-- Car Card 2 -->
-                <a href="#" class="car-card-link">
-            <div class="car-card ">
+        </a>
+
+        <!-- Car Card 2 -->
+        <a href="#" class="car-card-link">
+            <div class="car-card">
                 <img src="img/740i.jpg" alt="BMW 740i">
                 <div class="car-info">
                     <h3>BMW 740i</h3>
-                    <span class="price">$450.00</span>
-                    
+                    <div class="car-specs">
+                        <div class="spec-item"><i class="fas fa-car"></i> 250 km/h</div>
+                        <div class="spec-item"><i class="fas fa-bolt"></i> 375 HP</div>
+                        <div class="spec-item"><i class="fas fa-gas-pump"></i> Petrol</div>
+                    </div>
+                    <span class="price">$96.000</span>
                 </div>
             </div>
-            </a>
-            <!-- Car Card 3 -->
-             <a href="#" class="car-card-link">
+        </a>
+
+        <!-- Car Card 3 -->
+        <a href="#" class="car-card-link">
             <div class="car-card">
-                <img src="img/m5.png" alt="BMW M5" class="fafa">
+                <img src="img/M4.png" alt="BMW M4">
                 <div class="car-info">
-                    <h3>BMW M5</h3>
-                    <span class="price">$600.00</span>
+                    <h3>BMW M4</h3>
+                    <div class="car-specs">
+                        <div class="spec-item"><i class="fas fa-car"></i> 290 km/h</div>
+                        <div class="spec-item"><i class="fas fa-bolt"></i> 503 HP</div>
+                        <div class="spec-item"><i class="fas fa-gas-pump"></i> Petrol</div>
+                    </div>
+                    <span class="price"><del style="font-size: 0.8rem; opacity: 0.6;">$90.000</del><br>$80.000</span>
                 </div>
             </div>
-            </a>
-            <!-- Car Card 4 -->
-             <a href="#" class="car-card-link">
+        </a>
+
+        <!-- Car Card 4 -->
+        <a href="#" class="car-card-link">
             <div class="car-card">
                 <img src="img/OIP.jpg" alt="BMW M8">
                 <div class="car-info">
                     <h3>BMW M8</h3>
-                    <span class="price">$600.00</span>
+                    <div class="car-specs">
+                        <div class="spec-item"><i class="fas fa-car"></i> 305 km/h</div>
+                        <div class="spec-item"><i class="fas fa-bolt"></i> 617 HP</div>
+                        <div class="spec-item"><i class="fas fa-gas-pump"></i> Petrol</div>
+                    </div>
+                    <span class="price">$140.000</span>
                 </div>
             </div>
-            </a>
-        </div>
-    </section>
+        </a>
+    </div>
+</section> 
     <footer>
     <div class="footer-links-container">
         <div class="footer-column">
@@ -129,6 +166,8 @@
         <p>&copy; 2026 Luxury Cars. All rights reserved.</p>
     </div>
 </footer>
+<script src="globe.js"></script>
+    <script src="scriptHome.js"></script>
 
     
 </body>
