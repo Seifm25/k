@@ -34,7 +34,6 @@ body {
     object-fit: cover;
 }
 
-/*  التعديل هنا: الكلام يروح عالشمال */
 .content {
     text-align: left;
     color: #fff;
@@ -65,7 +64,7 @@ body {
     font-weight: bold;
     letter-spacing: 2px;
     color: #f39c12;
-    text-align: left;  /*  العنوان على الشمال */
+    text-align: left;  
 }
 
 .car-grid {
@@ -74,7 +73,6 @@ body {
     gap: 20px;
 }
 
-/*  التعديلات المهمة اللي تخلي كل البطاقات بنفس الطول */
 .car-card {
     background: rgba(0, 0, 0, 0.5);
     border-radius: 15px;
@@ -83,20 +81,20 @@ body {
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    height: 100%;  /*  ده يخلي كل البطاقات بنفس الطول */
+    height: 100%; 
 }
 
 .car-card img {
     width: 100%;
-    height: auto;  /*  ارتفاع ثابت للصورة */
-    object-fit: contain;  /*  الصورة تغطي المساحة بدون تشويه */
+    height: auto;  
+    object-fit: contain; 
     border-radius: 10px;
     margin-bottom: 15px;
 }
 
 .car-info {
     display: flex;
-    flex-direction: column; /* ترتيب العناصر رأسي */
+    flex-direction: column;
     gap: 10px;
     margin-top: auto; 
     text-align: left;
@@ -110,7 +108,7 @@ body {
     color: #f39c12;
     font-weight: bold;
     font-size: 1.1rem;
-    align-self: flex-start; /* يخلي السعر يبدأ من الشمال */
+    align-self: flex-start;
 }
 
 .car-specs {
@@ -132,19 +130,10 @@ body {
     gap: 5px;
 }
 
-/* الخطوط الفاصلة */
+
 .spec-item:not(:last-child) {
     border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
-
-
-
-
-
-
-
-
-
 
 h3 {
     font-size: 1.2rem;
@@ -155,7 +144,7 @@ h3 {
 
 .car-card-link {
     text-decoration: none;
-    color: white;
+    color: inherit;
     display: block;
 }
 
@@ -204,7 +193,7 @@ h3 {
     text-align: center;
 }
 
-/* استجابة للموبايل */
+
 @media (max-width: 768px) {
     .futeures h2 {
         font-size: 1.6rem;

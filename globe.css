@@ -161,7 +161,7 @@ body.lightMode:has(.contact-container) {
 
 body.lightMode .contact-info h1,
 body.lightMode .contact-info p {
-    color: black;
+    color: #fff !important;
     text-shadow: none;
 }
 
